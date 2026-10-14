@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/Smart_City_Citizen_Portal/sw.js', { scope: '/Smart_City_Citizen_Portal/' })})}
