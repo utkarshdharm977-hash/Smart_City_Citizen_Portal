@@ -1,0 +1,136 @@
+/* ── Chatbot Widget — Government Theme ── */
+
+.chatbot-window {
+  position: fixed;
+  bottom: 110px;
+  right: 2rem;
+  width: 360px;
+  height: 520px;
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  overflow: hidden;
+  border: 1px solid var(--gov-border);
+}
+
+.chatbot-header {
+  background: linear-gradient(135deg, var(--gov-navy-dark) 0%, var(--gov-navy) 100%);
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid var(--gov-saffron);
+}
+
+.bot-avatar {
+  width: 38px;
+  height: 38px;
+  background: var(--gov-saffron);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.15rem;
+}
+
+.close-chat {
+  color: rgba(255,255,255,0.65);
+  transition: color var(--transition-fast);
+}
+.close-chat:hover { color: white; }
+
+.chatbot-messages {
+  flex: 1;
+  padding: 1.25rem;
+  overflow-y: auto;
+  background: var(--gov-light-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.message-wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  max-width: 85%;
+}
+.message-wrapper.user  { align-self: flex-end; flex-direction: row; }
+.message-wrapper.bot   { align-self: flex-start; }
+
+.msg-icon {
+  width: 24px; height: 24px;
+  border-radius: 6px;
+  background: var(--gov-navy);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.65rem;
+}
+.msg-icon.user { background: var(--gov-saffron); }
+
+.message-bubble {
+  padding: 0.65rem 0.9rem;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  box-shadow: var(--shadow-xs);
+}
+.message-bubble.bot {
+  background: white;
+  color: var(--gov-text);
+  border: 1px solid var(--gov-border);
+  border-bottom-left-radius: 4px;
+}
+.message-bubble.user {
+  background: var(--gov-navy);
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.chatbot-input-area {
+  padding: 0.85rem;
+  background: white;
+  border-top: 1px solid var(--gov-border);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chatbot-input-area input {
+  flex: 1;
+  padding: 0.6rem 0.9rem;
+  border: 1.5px solid var(--gov-border);
+  border-radius: var(--radius-md);
+  outline: none;
+  font-family: inherit;
+  font-size: 0.85rem;
+  transition: border-color var(--transition-fast);
+}
+.chatbot-input-area input:focus {
+  border-color: var(--gov-navy);
+}
+
+.send-btn {
+  width: 40px; height: 40px;
+  background: var(--gov-navy);
+  color: white;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+.send-btn:disabled {
+  background: var(--gov-border);
+  cursor: not-allowed;
+}
+.send-btn:not(:disabled):hover {
+  background: var(--gov-saffron);
+  transform: scale(1.05);
+}

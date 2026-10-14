@@ -1,0 +1,114 @@
+/* ── Accessibility Widget — Government Theme ── */
+
+.accessibility-wrapper {
+  position: fixed;
+  left: 0;
+  top: 35%;
+  z-index: 1000;
+  display: flex;
+  align-items: flex-start;
+}
+
+.acc-toggle-btn {
+  background: var(--gov-navy);
+  color: white;
+  width: 38px;
+  height: 48px;
+  border-radius: 0 6px 6px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 3px 0 12px rgba(0,53,128,0.2);
+  transition: all var(--transition-fast);
+  border-left: 3px solid var(--gov-saffron);
+}
+
+.acc-toggle-btn:hover {
+  width: 44px;
+  background: var(--gov-saffron);
+}
+
+.acc-panel {
+  background: white;
+  border: 1px solid var(--gov-border);
+  box-shadow: var(--shadow-lg);
+  padding: 1rem;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  width: 200px;
+  margin-left: -4px;
+}
+
+.acc-panel h4 {
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--gov-navy);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--gov-saffron);
+}
+
+.acc-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.acc-control > span {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--gov-text-muted);
+  font-weight: 600;
+}
+
+.mr-2 { margin-right: 0.5rem; }
+
+.acc-actions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.acc-actions button {
+  flex: 1;
+  padding: 0.3rem;
+  border: 1px solid var(--gov-border);
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: var(--gov-light-bg);
+  color: var(--gov-text);
+  transition: all var(--transition-fast);
+}
+
+.acc-actions button:hover {
+  background: white;
+  border-color: var(--gov-navy);
+}
+
+.acc-actions button.active {
+  background: var(--gov-navy);
+  color: white;
+  border-color: var(--gov-navy);
+}
+
+/* High Contrast Mode */
+body.high-contrast-mode {
+  --gov-cream:      #000000;
+  --gov-light-bg:   #111111;
+  --gov-white:      #111111;
+  --gov-text:       #ffffff;
+  --gov-text-muted: #dddddd;
+  --gov-border:     rgba(255,255,255,0.2);
+}
+
+body.high-contrast-mode .card,
+body.high-contrast-mode .advanced-glass,
+body.high-contrast-mode .glass-marquee {
+  background: #000;
+  border: 2px solid #fff;
+  color: #fff;
+}

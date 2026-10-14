@@ -1,0 +1,96 @@
+/* App.css — Application-level overrides for Government Portal */
+
+/* Remove any Vite boilerplate. Global styles are in index.css */
+
+/* Ensure framer-motion works correctly */
+.home-page section {
+  position: relative;
+}
+
+/* Government scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--gov-light-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 53, 128, 0.25);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 53, 128, 0.45);
+}
+
+/* Focus rings for accessibility — government style */
+:focus-visible {
+  outline: 2px solid var(--gov-saffron);
+  outline-offset: 2px;
+}
+
+/* Selection highlight */
+::selection {
+  background: rgba(255, 98, 0, 0.2);
+  color: var(--gov-navy);
+}
+
+/* ── About Page Utilities ── */
+.about-page { padding-top: 120px; overflow-x: hidden; }
+.py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+.font-bold { font-weight: 700; }
+.font-black { font-weight: 900; }
+.text-4xl { font-size: 2.25rem; }
+.text-2xl { font-size: 1.5rem; }
+.text-xl  { font-size: 1.25rem; }
+.text-lg  { font-size: 1.125rem; }
+.text-sm  { font-size: 0.875rem; }
+.text-xs  { font-size: 0.75rem; }
+.text-slate-900 { color: #0f172a; }
+.text-slate-800 { color: #1e293b; }
+.text-slate-600 { color: var(--gov-text-muted); }
+.text-slate-500 { color: #64748b; }
+.text-slate-400 { color: #94a3b8; }
+.text-indigo-600 { color: var(--gov-navy); }
+.bg-indigo-100  { background: rgba(0,53,128,0.08); }
+.bg-emerald-100 { background: var(--gov-green-bg); }
+.text-emerald-600 { color: var(--gov-green); }
+.text-indigo-600  { color: var(--gov-navy); }
+.bg-white { background: white; }
+.bg-slate-100 { background: var(--gov-light-bg); }
+.max-w-2xl { max-width: 42rem; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.mb-2  { margin-bottom: 0.5rem; }
+.mb-3  { margin-bottom: 0.75rem; }
+.mb-4  { margin-bottom: 1rem; }
+.mb-6  { margin-bottom: 1.5rem; }
+.mb-10 { margin-bottom: 2.5rem; }
+.mb-16 { margin-bottom: 4rem; }
+.mt-1  { margin-top: 0.25rem; }
+.gap-2 { gap: 0.5rem; }
+.gap-6 { gap: 1.5rem; }
+.p-6   { padding: 1.5rem; }
+.p-8   { padding: 2rem; }
+.w-14  { width: 3.5rem; }
+.h-14  { height: 3.5rem; }
+.w-20  { width: 5rem; }
+.h-20  { height: 5rem; }
+.w-full { width: 100%; }
+.rounded-full { border-radius: 9999px; }
+.rounded-xl { border-radius: var(--radius-xl); }
+.rounded-2xl { border-radius: 1rem; }
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.overflow-hidden { overflow: hidden; }
+.leading-relaxed { line-height: 1.75; }
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-xs { box-shadow: var(--shadow-xs); }
+.border { border: 1px solid var(--gov-border); }
+.border-slate-100 { border-color: rgba(0,53,128,0.08); }
+.border-slate-200 { border-color: var(--gov-border); }
+.inline-block { display: inline-block; }
+.text-3xl { font-size: 1.875rem; }
